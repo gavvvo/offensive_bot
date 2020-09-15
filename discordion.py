@@ -172,5 +172,4 @@ async def on_message(message):
 
 
 
-client.loop.create_task(list_servers())
 client.run(os.getenv("TOKEN"))
