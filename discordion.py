@@ -128,7 +128,6 @@ async def USRS():
     await client.say(len(usrs))
 
 @client.command(pass_context = True)
-@commands.has_permissions(delete_messages = True)
 async def clear(ctx, number):
 	mgs = []
 	number = int(number)
