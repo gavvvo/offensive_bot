@@ -161,7 +161,7 @@ async def info(ctx,member: discord.Member=None):
     em.set_thumbnail(url=member.avatar_url)
     await client.say(embed=em)
 
-@client.event
+'''@client.event
 async def on_message(message):
 	fucks = [
 	"Did you mean to say ***fuck***, you fucking piece of family-freindly shit?",
@@ -173,5 +173,5 @@ async def on_message(message):
 		pass
 
 
-
+'''
 client.run(os.getenv("TOKEN"))
