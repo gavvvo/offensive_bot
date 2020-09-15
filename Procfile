@@ -1,1 +1,1 @@
-worker: python discord_bot_gain.py
+worker: python discord_bot_again.py
