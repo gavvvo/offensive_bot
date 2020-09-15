@@ -147,7 +147,7 @@ async def sayd(ctx,*,message):
 
 
         
-@cleint.command(pass_context=True)
+@client.command(pass_context=True)
 async def info(ctx,member: discord.Member=None):
     'Show info about a member'
     if member is None:
