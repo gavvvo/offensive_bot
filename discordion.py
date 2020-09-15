@@ -133,7 +133,7 @@ async def clear(ctx, number):
 	mgs = []
 	number = int(number)
 	async for x in client.logs_from(ctx.message.channel, limit = number):
-    	mgs.append(x)
+		mgs.append(x)
 	await client.delete_messages(mgs)
 
 
