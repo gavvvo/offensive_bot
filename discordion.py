@@ -12,7 +12,7 @@ import traceback
 
 BOT_PREFIX = ("!!!")
 
-
+client.say = ctx.send
 client = Bot(command_prefix=BOT_PREFIX)
 c2 = discord.Client()
 
