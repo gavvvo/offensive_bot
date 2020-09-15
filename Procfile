@@ -1,1 +1,1 @@
-worker: discordion.py
+worker: python discordion.py
