@@ -167,7 +167,7 @@ async def on_message(message):
 	"Did you mean to say ***fuck***, you fucking piece of family-freindly shit?",
 	"just say ***fuck***",
 	"JUST SAY FUCK YOU SON OF A BITCH",]
-	if ("frick", "f***","f*ck","fck","fok") in message:
+	if ("frick", "f***","f*ck","fck","fok") in message.context:
 		client.say(random.choice(fucks))
 
 
