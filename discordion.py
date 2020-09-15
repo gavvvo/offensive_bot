@@ -10,7 +10,7 @@ import sys
 import traceback
 
 
-BOT_PREFIX = ("yes")
+BOT_PREFIX = ("!!!")
 
 
 client = Bot(command_prefix=BOT_PREFIX)
