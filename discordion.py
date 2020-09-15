@@ -28,39 +28,39 @@ async def counter(ctx):
     embed.add_field(name="Owner", value=ctx.message.guild.owner.mention)
     embed.add_field(name="Members", value=ctx.message.guild.member_count)
     embed.set_thumbnail(url=ctx.message.guild.icon_url)
-    await client.say(embed=embed)
+    await ctx.send(embed=embed)
 
-@client.command()
+@client.command(pass_context = True)
 async def square(number):
     squared_value = int(number) * int(number)
-    await client.say(str(number) + " squared is " + str(squared_value))
+    await ctx.send(str(number) + " squared is " + str(squared_value))
 
-@client.command()
+@client.command(pass_context = True)
 async def double(number):
     squared_value = int(number) + int(number)
-    await client.say(str(number) + " x2 is " + str(squared_value))
+    await ctx.send(str(number) + " x2 is " + str(squared_value))
 
 
 @client.command(pass_context = True)
 @commands.has_permissions(kick_members = True) 
 async def kick(ctx, userName: discord.User):
     await client.kick(userName)
-    await client.say("sucessfully kicked, sir!")
+    await ctx.send("sucessfully kicked, sir!")
 
 @client.command(pass_context = True)
 @commands.has_permissions(ban_members = True) 
 async def ban(ctx, userName: discord.User):
     await client.ban(userName)
-    await client.say("sucessfully banned, sir!") 
+    await ctx.send("sucessfully banned, sir!") 
 
-@client.command()
+@client.command(pass_context = True)
 async def say(*,message):
-         await client.say(message)
+         await ctx.send(message)
 
 
 @client.command(pass_context=True)
 async def ping(ctx):
-    resp = await client.say('Pong! Loading...')
+    resp = await ctx.send('Pong! Loading...')
     diff = resp.timestamp - ctx.message.timestamp
     await client.edit_message(resp, 'Pong! That took {:.1f}ms.'.format(1000*diff.total_seconds()))
 
@@ -71,7 +71,7 @@ async def status(ctx,*,message):
          await client.change_presence(game=Game(name= message))
          await client.say("`successfully changed presence`")
     else:
-        await client.say("You don't own me!")
+        await ctx.send("You don't own me!")
 
 
 @client.command(pass_context=True, hidden=True)
@@ -159,7 +159,7 @@ async def info(ctx,member: discord.Member=None):
     em.add_field(name='Roles', value=', '.join(g.name for g in member.roles))
     em.add_field(name='Joined', value='{0.joined_at}'.format(member))
     em.set_thumbnail(url=member.avatar_url)
-    await client.say(embed=em)
+    await ctx.send(embed=em)
 
 '''@client.event
 async def on_message(message):
