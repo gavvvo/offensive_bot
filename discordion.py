@@ -169,6 +169,8 @@ async def on_message(message):
 	"JUST SAY FUCK YOU SON OF A BITCH",]
 	if message == "frick":
 		client.say(random.choice(fucks))
+	else:
+		pass
 
 
 
