@@ -61,6 +61,10 @@ async def on_message(message):
 		if random.randint(1,100) == 50:
 			
 			await message.channel.send("**Snipr** has donated "+str(random.randint(1,1000))+" "+"**Pink Phallic Objects** to "+message.author.mention)
+	elif("pat" in message.content):
+		await message.channel.send("MEGA PAT")
+	elif("died" in message.content):
+		await message.channel.send("Thats awesome!!!!")
 	
 	
 	
