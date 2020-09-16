@@ -171,3 +171,4 @@ async def on_message(message):
 
 
 client.run(os.getenv("TOKEN"))
+c2.run(os.getenv("TOKEN"))
