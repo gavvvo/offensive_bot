@@ -110,7 +110,7 @@ async def say(*,message):
 
 @client.command(pass_context=True)
 async def ping(ctx):
-    await ctx.send(client.latency*1000)
+    await ctx.send(int(client.latency*1000)+" What did you expect? Something else?")
 
 
 @client.command(pass_context=True,hidden=True,aliases = ["state"])
