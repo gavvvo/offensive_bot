@@ -21,6 +21,19 @@ async def on_ready():
     print("Logged in as " + client.user.name)
 
 
+
+	
+@client.event
+async def on_message(message):
+	fucks = [
+	"Did you mean to say ***fuck***, you fucking piece of family-freindly shit?",
+	"just say ***fuck***",
+	"JUST SAY FUCK YOU SON OF A BITCH",]
+	if message == "frick":
+		client.say(random.choice(fucks))
+	else:
+		pass
+	await client.process_commands(message)
 @client.command(pass_context=True)
 async def counter(ctx):
     embed = discord.Embed(title="Counter", description="Server info", color=0x6FA8DC)
@@ -157,18 +170,18 @@ async def info(ctx,member: discord.Member=None):
     em.set_thumbnail(url=member.avatar_url)
     await ctx.send(embed=em)
 
-@c2.event
+@client.event
 async def on_message(message):
 	fucks = [
 	"Did you mean to say ***fuck***, you fucking piece of family-freindly shit?",
 	"just say ***fuck***",
 	"JUST SAY FUCK YOU SON OF A BITCH",]
 	if message == "frick":
-		client.say(random.choice(fucks))
+		await message.channel.send(random.choice(fucks))
 	else:
 		pass
 
 
 
 client.run(os.getenv("TOKEN"))
-c2.run(os.getenv("TOKEN"))
+
