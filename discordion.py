@@ -33,8 +33,22 @@ async def on_message(message):
 	"JUST SAY FUCK YOU SON OF A BITCH",]
 	if "frick" in message.content:
 		await message.channel.send(random.choice(fucks))
-	else:
-		pass
+	elif("fck" in message.content):
+		await message.channel.send(random.choice(fucks))
+	elif("f*ck" in message.content):
+		await message.channel.send(random.choice(fucks))
+	elif("fok" in message.content):
+		await message.channel.send(random.choice(fucks))
+	elif("f***" in message.content):
+		await message.channel.send(random.choice(fucks))
+	elif("fak" in message.content):
+		await message.channel.send(random.choice(fucks))
+	elif("****" in message.content):
+		await message.channel.send(random.choice(fucks))
+	elif("nigga" in message.content):
+		await message.channel.send("you fucking racist piece of shit)
+	elif("I'm" in message.content):
+		await message.channel.send("Hi " +message.author.mention+",I'm gay")
 	
 	
 	await client.process_commands(message)
