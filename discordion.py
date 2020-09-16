@@ -56,10 +56,14 @@ async def on_message(message):
 		await message.channel.send("Thats awesome!!!!")
 	elif("shat" in message.content):
 		await message.channel.send("The word is called ***SHIT***")
-	elif("pls beg" in message.content):
+	'''elif("pls beg" in message.content):
 		if random.randint(1,100) == 50:
 			
-			await message.channel.send("Snipr has donated "+random.randint(1,1000)+"**Pink Phallic Objects** to "+message.author.mention)
+			await message.channel.send("Snipr has donated "+random.randint(1,1000)+"**Pink Phallic Objects** to "+message.author.mention)'''
+	elif("pls beg" in message.content):
+		
+			
+		await message.channel.send("Snipr has donated "+random.randint(1,1000)+"**Pink Phallic Objects** to "+message.author.mention)
 	
 	
 	await client.process_commands(message)
