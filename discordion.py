@@ -48,7 +48,8 @@ async def on_message(message):
 	elif("nigga" in message.content):
 		await message.channel.send("you fucking racist piece of shit")
 	elif("I'm" in message.content):
-		await message.channel.send("Hi " +message.content+",I'm gay")
+		nomnom = message.content.split("I'm",1)
+		await message.channel.send("Hi " +nomnom[1]+",I'm gay")
 	
 	
 	await client.process_commands(message)
