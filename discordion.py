@@ -23,19 +23,21 @@ async def on_ready():
 
 
 	
-'''@client.event
+@client.event
 async def on_message(message):
+	if message.author = client.user:
+		return
 	fucks = [
 	"Did you mean to say ***fuck***, you fucking piece of family-freindly shit?",
 	"just say ***fuck***",
 	"JUST SAY FUCK YOU SON OF A BITCH",]
-	if "frick" or "fck"or"fok"or"f*ck"or"f***"or"****" in message.content:
+	if "frick" in message.content:
 		await message.channel.send(random.choice(fucks))
 	else:
 		pass
 	
 	
-	await client.process_commands(message)'''
+	await client.process_commands(message)
 	
 	
 @client.command(pass_context=True)
