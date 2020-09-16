@@ -183,8 +183,8 @@ async def clear(ctx, number):
 
 @client.command(pass_context = True, hidden = True)
 async def sayd(ctx,*,message):
-	await client.delete_message(ctx.message)
-	await client.say(message)
+	await ctx.channel.purge(limit = 1)
+	await ctx.send(message)
 
 
 
