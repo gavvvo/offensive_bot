@@ -43,14 +43,14 @@ async def double(number):
 
 @client.command(pass_context = True)
 @commands.has_permissions(kick_members = True) 
-async def kick(ctx, userName: discord.User):
-    await client.kick(userName)
+async def kick(ctx, userName: discord.Member,*,reason):
+    await userName.kick(reason = reason)
     await ctx.send("sucessfully kicked, sir!")
 
 @client.command(pass_context = True)
 @commands.has_permissions(ban_members = True) 
-async def ban(ctx, userName: discord.User):
-    await client.ban(userName)
+async def ban(ctx, userName: discord.Member,*,reason):
+    await userName.ban(reason = reason)
     await ctx.send("sucessfully banned, sir!") 
 
 @client.command(pass_context = True)
@@ -131,7 +131,7 @@ async def USRS():
 async def clear(ctx, number):
 	mgs = []
 	number = int(number)
-	await ctx.channel.purge(limit = number)
+	await ctx.channel.purge(limit = number+1)
 
 
 
