@@ -25,7 +25,7 @@ async def on_ready():
 	
 @client.event
 async def on_message(message):
-	if message.author = client.user:
+	if message.author == client.user:
 		return
 	fucks = [
 	"Did you mean to say ***fuck***, you fucking piece of family-freindly shit?",
