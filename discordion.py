@@ -23,7 +23,7 @@ async def on_ready():
 
 
 	
-@client.event
+'''@client.event
 async def on_message(message):
 	fucks = [
 	"Did you mean to say ***fuck***, you fucking piece of family-freindly shit?",
@@ -35,7 +35,7 @@ async def on_message(message):
 		pass
 	
 	
-	await client.process_commands(message)
+	await client.process_commands(message)'''
 	
 	
 @client.command(pass_context=True)
