@@ -50,6 +50,16 @@ async def on_message(message):
 	elif("I'm" in message.content):
 		nomnom = message.content.split("I'm",1)
 		await message.channel.send("Hi " +nomnom[1]+",I'm gay")
+	elif("Janus" in message.content):
+		await message.channel.send("Shut the fuck up, Jonathan!!!")
+	elif("lost" in message.content):
+		await message.channel.send("Thats awesome!!!!")
+	elif("shat" in message.content):
+		await message.channel.send("The word is called ***SHIT***")
+	elif("pls beg" in message.content):
+		if random.randint(1,100) == 50:
+			
+			await message.channel.send("Snipr has donated "+random.randint(1,1000)+"**Pink Phallic Objects** to "+message.author.mention)
 	
 	
 	await client.process_commands(message)
