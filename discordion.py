@@ -46,7 +46,7 @@ async def on_message(message):
 	elif("****" in message.content):
 		await message.channel.send(random.choice(fucks))
 	elif("nigga" in message.content):
-		await message.channel.send("you fucking racist piece of shit)
+		await message.channel.send("you fucking racist piece of shit")
 	elif("I'm" in message.content):
 		await message.channel.send("Hi " +message.author.mention+",I'm gay")
 	
