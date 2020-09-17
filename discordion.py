@@ -177,9 +177,20 @@ async def USRS():
 
 @client.command(pass_context = True)
 async def clear(ctx, number):
-	mgs = []
-	number = int(number)
-	await ctx.channel.purge(limit = number+1)
+	if not ctx.message.author.id == '602471755805753365':
+		mgs = []
+		number = int(number)
+		await ctx.channel.purge(limit = number+1)
+	else:
+		await ctx.send("Hmm, idk you already deleted enough messages on this server... Hmm, let me think about whether I'll delete the messages or not...")
+		rond = random.randint(1,2)
+		if rond == 2:
+			number = int(number)
+			await ctx.channel.purge(limit = number+1)
+			await ctx.send("welp. I deleted the messages you requested.")
+		else:
+			await ctx.send("Nope, I wont delete any messages.")
+			
 
 
 
